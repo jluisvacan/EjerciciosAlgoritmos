@@ -1,4 +1,4 @@
-let nam = parseInt(prompt("Ingresa el algoritmo a realizar (claramente a exepción del número 3)", "1 2 4 5 6"));
+let nam = parseInt(prompt("Ingresa el algoritmo a realizar", "1 2 3 4 5 6"));
 switch (nam) {
     case 1:
         let a = parseInt(prompt("Ingresa primer número (entre 1 y 100)"));
@@ -33,8 +33,13 @@ switch (nam) {
         alert("El número menor es " + menorQue);
         break;
     case 3:
-        alert("Ya sabias que el 3 aún no :/  Vuelvelo a intentarlo!!")
-        console.log("Aún no dispnible problema 3.  Vuelvelo a intentarlo!!");
+        let numy = prompt("Piensa en un número entre el 0 y 100, digitalooo!!");
+        for (let index = 1; index <=100; index++) {
+            if (numy==index) {
+                alert("Tú número es: "+index + " !! :D");
+                console.log("Tu número es " + index);
+            }
+        }
         break;
     case 4:
         let w = parseInt(prompt("Ingresa primer número (entre 100 y 200)", ""));
@@ -109,6 +114,13 @@ switch (nam) {
 // alert("El número menor es " + menorQue);
 
 // 3. Realizar un algortimo para adivinar un número entre el 1 y el 100 en el menor número de pasos posibles (SUSPENDIDO)
+
+// let numy = prompt("Piensa en un número entre el 0 y 100, digitalooo!!");
+// for (let index = 1; index <=100; index++) {
+//     if (numy==index) {
+//         alert("Tú número es: "+index + " !! :D");
+//         console.log("Tu número es " + index);
+//     }
 
 // 4. Solicitar un entero (entre el 100 y el 200) y determinar si es múltiplo de 3
 // let w = parseInt(prompt("Ingresa primer número (entre 100 y 200)", ""));

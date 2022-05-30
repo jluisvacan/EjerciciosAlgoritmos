@@ -33,13 +33,29 @@ switch (nam) {
         alert("El número menor es " + menorQue);
         break;
     case 3:
-        let numy = prompt("Piensa en un número entre el 0 y 100, digitalooo!!");
-        for (let index = 1; index <=100; index++) {
-            if (numy==index) {
-                alert("Tú número es: "+index + " !! :D");
-                console.log("Tu número es " + index);
-            }
-        }
+        function adivinar() {
+            let superior = 100;
+            let inferior = 0;
+            let noEncontrado = true;
+            while (noEncontrado) {
+                let mid = parseInt(inferior + (superior-inferior)/2);
+        
+                if (((superior-inferior)/2)<1){
+                    noEncontrado=false;
+                    alert("Tu número es el "+ (parseInt(mid)+1));
+                    break;
+                }//if
+                let res = confirm("tu número es menor o igual a "+ mid);
+                if (res) {
+                    superior=mid;
+                } else {
+                    inferior=mid;
+                } // if
+                console.log(inferior,superior);
+            } //while
+        }// adivinar
+        
+        adivinar();
         break;
     case 4:
         let w = parseInt(prompt("Ingresa primer número (entre 100 y 200)", ""));
@@ -114,6 +130,29 @@ switch (nam) {
 // alert("El número menor es " + menorQue);
 
 // 3. Realizar un algortimo para adivinar un número entre el 1 y el 100 en el menor número de pasos posibles (SUSPENDIDO)
+// function adivinar() {
+//     let superior = 100;
+//     let inferior = 0;
+//     let noEncontrado = true;
+//     while (noEncontrado) {
+//         let mid = parseInt(inferior + (superior-inferior)/2);
+
+//         if (((superior-inferior)/2)<1){
+//             noEncontrado=false;
+//             alert("Tu número es el "+ (parseInt(mid)+1));
+//             break;
+//         }//if
+//         let res = confirm("tu número es menor o igual a "+ mid);
+//         if (res) {
+//             superior=mid;
+//         } else {
+//             inferior=mid;
+//         } // if
+//         console.log(inferior,superior);
+//     } //while
+// }// adivinar
+
+// adivinar();
 
 // let numy = prompt("Piensa en un número entre el 0 y 100, digitalooo!!");
 // for (let index = 1; index <=100; index++) {
